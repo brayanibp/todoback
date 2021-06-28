@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function signUp(Request $request)
+    public function signup(Request $request)
     {
         $request->validate([
             'name' => 'required|string',

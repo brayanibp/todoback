@@ -24,3 +24,16 @@ Route::group([
     Route::put('/{id}', 'TaskController@update');
     Route::delete('/{id}', 'TaskController@destroy');
 });
+
+Route::group([
+    'prefix' => 'user',
+], function () {
+    Route::post('signup', 'UserController@signup');
+    Route::post('login', 'UserController@login');
+    Route::group([
+        'middleware' => 'auth:sanctum'
+    ], function () {
+        Route::get('logout', 'UserController@logout');
+        Route::get('me', 'UserController@user');
+    });
+});
