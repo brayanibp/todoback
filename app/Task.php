@@ -20,4 +20,8 @@ class Task extends Model
     {
         return $query->where('name', 'like', '%' . $arg . '%');
     }
+    public function scopeUser($query, $user_id)
+    {
+        return $query->where('user_id', '=', $user_id);
+    }
 }

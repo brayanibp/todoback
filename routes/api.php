@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group([
-    'prefix' => 'tasks'
+    'prefix' => 'tasks',
+    'middleware' => 'auth:sanctum'
 ], function () {
     Route::get('/single/{id}', 'TaskController@getTask');
     Route::get('/{filter}', 'TaskController@getListOfTasks');
