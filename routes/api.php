@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'prefix' => 'tasks'
 ], function () {
-    Route::get('/{filter}', 'TaskController@GetListOfTasks');
-    Route::get('/{filter}/{arg}', 'TaskController@GetListOfTasks');
+    Route::get('/single/{id}', 'TaskController@getTask');
+    Route::get('/{filter}', 'TaskController@getListOfTasks');
+    Route::get('/{filter}/{arg}', 'TaskController@getListOfTasks');
+    Route::post('/', 'TaskController@store');
+    Route::put('/{id}', 'TaskController@update');
+    Route::delete('/{id}', 'TaskController@destroy');
 });

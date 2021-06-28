@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function GetListOfTasks($filter = "all", $arg = "")
+    public function getListOfTasks($filter = "all", $arg = "")
     {
         if ($filter == "all") {
             return Task::paginate(10);
@@ -34,5 +34,25 @@ class TaskController extends Controller
             'name' => $request['name']
         ])->save();
         return response()->json(["task" => $task], 201);
+    }
+
+    public function getTask($id)
+    {
+        return Task::find($id);
+    }
+
+    public function update($id, Request $request)
+    {
+        $request->validate([
+            'name' => 'string|required'
+        ]);
+        $task = Task::find($id);
+        $task->fill($request->all())->save();
+        return response()->json(["task" => $task], 201);
+    }
+    public function destroy($id)
+    {
+        Task::destroy($id);
+        return response()->json(["message" => "destroyed"], 200);
     }
 }
