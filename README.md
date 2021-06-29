@@ -12,9 +12,7 @@ The first thing that will have to do is to install dependencies.
 
 For you should be enough just to download and install [Xampp](https://www.apachefriends.org/es/download.html) with the PHP 7.4 version as the remarked below
 
-
-
-
+![](./doc/Xampp.png)
 
 ## Learning Laravel
 
