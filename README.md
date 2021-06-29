@@ -27,19 +27,19 @@ To see [how to download and install the project](#installing_the_project) follow
 You should use the below commands
 
 ```
-  sudo apt update   #This will update the apt repos
+sudo apt update   #This will update the apt repos
 ```
 
 ```
-  sudo apt install apache2   #This will install apache server
+sudo apt install apache2   #This will install apache server
 ```
 
 ```
-  sudo apt install mysql-server #This will do a basic installation of mysql server
+sudo apt install mysql-server #This will do a basic installation of mysql server
 ```
 
 ```
-  sudo service apache2 start && sudo service mysql start #This will start apache and mysql server
+sudo service apache2 start && sudo service mysql start #This will start apache and mysql server
 ```
 
 Now to install the 7.4 PHP version
@@ -68,7 +68,7 @@ sudo apt install -y php7.4 php7.4-fpm php7.4-json php7.4-curl php7.4-bcmath php7
 To install the project first you have to clone the repo with
 
 ```
-  git clone https://github.com/brayanibp/todoback.git
+git clone https://github.com/brayanibp/todoback.git
 ```
 
 After that you should enter in the project folder and run:
@@ -79,7 +79,9 @@ composer install -vv
 
 Depending on your internet connection it would take a while because of that it prefer to use `-vv` or `-vvv` flags with slow connections it gives more feedback
 
-After install composer dependencies
+After install composer dependencies you have to create a `.env` file and copy the `.env.example` file content
+
+After that follow intructions below
 
 ```shell
 # Commands to pre config project
