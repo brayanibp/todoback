@@ -39,7 +39,26 @@ You should use the below commands
 ```
 
 ```
-  sudo service apache2 start
+  sudo service apache2 start && sudo service mysql start #This will start apache and mysql server
+```
+
+Now to install the 7.4 PHP version
+
+```
+sudo apt update
+
+#FOR UBUNTU 20.04
+
+sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
+
+## You shoud run to see if it is all ready
+
+php --version
+
+#FOR UBUNTU 18.04
+
+sudo apt -y install software-properties-common
+
 ```
 
 ## <a name="installing_the_project"></a> Installing the project
