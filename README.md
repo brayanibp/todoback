@@ -2,7 +2,7 @@
 
 This project is builded with Laravel 7
 
-Is a basic API rest project to work with the [ToDo App](https://github.com/brayanibp/todoapp) project.
+Is a basic API rest project to work with the [todoapp](https://github.com/brayanibp/todoapp) project.
 
 ## Installing Pre-dependencies
 
