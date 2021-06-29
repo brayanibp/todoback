@@ -109,7 +109,7 @@ mysql> exit;
 
 ### Note:
 
-If you have phpmyadmin you would try to do it from the phpmyadmin panel
+If you have phpmyadmin you could try to do it from the phpmyadmin panel
 
 ![](./doc/phpmyadmin.png)
 
