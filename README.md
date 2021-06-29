@@ -142,7 +142,9 @@ The [http://localhost:8000/](http://localhost:8000/) route is disabled and will 
 ### `get` http://localhost:8000/tasks/{filter}
 
 http://localhost:8000/tasks/all
+
 http://localhost:8000/tasks/completed
+
 http://localhost:8000/tasks/uncompleted
 
 ### `get`http://localhost:8000/tasks/{filter}/{arg}
