@@ -65,6 +65,44 @@ sudo apt install -y php7.4 php7.4-fpm php7.4-json php7.4-curl php7.4-bcmath php7
 
 ## <a name="installing_the_project"></a> Installing the project
 
+To install the project first you have to clone the repo with
+
+```
+  git clone https://github.com/brayanibp/todoback.git
+```
+
+After that you should enter in the project folder and run:
+
+```
+composer install -vv
+```
+
+Depending on your internet connection it would take a while because of that it prefer to use `-vv` or `-vvv` flags with slow connections it gives more feedback
+
+After install composer dependencies
+
+```shell
+  # Commands to pre config project
+
+  php artisan key:generate
+  php artisan config:cache
+
+  # If you do not have password for mysql database
+
+  mysql -u root
+
+  # If you already have a password then
+
+  mysql -u root -p #You will have to enter your root password
+
+  mysql> CREATE DATABASE todoapp;
+
+  mysql> exit;
+
+  php artisan migrate:fresh --seed #This command will make the tables migration and execute the database tasks seeder
+
+```
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
