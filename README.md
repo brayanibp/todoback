@@ -49,7 +49,7 @@ sudo apt update
 
 #FOR UBUNTU 20.04
 
-sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
+sudo apt install -y php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
 
 ## You shoud run to see if it is all ready
 
@@ -58,7 +58,9 @@ php --version
 #FOR UBUNTU 18.04
 
 sudo apt -y install software-properties-common
-
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt install -y php7.4 php7.4-fpm php7.4-json php7.4-curl php7.4-bcmath php7.4-bz2 php7.4-intl php7.4-gd php7.4-mbstring php7.4-mysql php7.4-zip php7.4-common php7.4-pear
 ```
 
 ## <a name="installing_the_project"></a> Installing the project
