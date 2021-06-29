@@ -87,6 +87,15 @@ After install composer dependencies
 php artisan key:generate
 php artisan config:cache
 
+```
+
+### Note:
+
+If you have phpmyadmin you would try to do it from the phpmyadmin panel
+
+![](./doc/phpmyadmin.png)
+
+```shell
 # If you do not have password for mysql database
 
 mysql -u root
@@ -95,7 +104,9 @@ mysql -u root
 
 mysql -u root -p #You will have to enter your root password
 
-mysql> CREATE DATABASE todoapp;
+#Once inside mysql client you will write
+
+mysql> CREATE DATABASE db_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 mysql> exit;
 
