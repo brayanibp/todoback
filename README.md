@@ -137,31 +137,31 @@ The [http://localhost:8000/](http://localhost:8000/) route is disabled and will 
 
 ## Available routes
 
-### `get` http://localhost:8000/tasks/single/{id}
+### `get` http://localhost:8000/api/tasks/single/{id}
 
-### `get` http://localhost:8000/tasks/{filter}
+### `get` http://localhost:8000/api/tasks/{filter}
 
-http://localhost:8000/tasks/all
+http://localhost:8000/api/tasks/all
 
-http://localhost:8000/tasks/completed
+http://localhost:8000/api/tasks/completed
 
-http://localhost:8000/tasks/uncompleted
+http://localhost:8000/api/tasks/uncompleted
 
-### `get`http://localhost:8000/tasks/{filter}/{arg}
+### `get`http://localhost:8000/api/tasks/{filter}/{arg}
 
-http://localhost:8000/tasks/name/{arg}
+http://localhost:8000/api/tasks/name/{arg}
 
 (The "arg" word refers to "argument" and in the case of the path it refers to the name of the task being searched for)
 
-### `post` http://localhost:8000/tasks/
+### `post` http://localhost:8000/api/tasks/
 
 Path used to create a new task into database
 
-### `put` http://localhost:8000/tasks/{id}
+### `put` http://localhost:8000/api/tasks/{id}
 
 Path used to update a task by ID
 
-### `delete` http://localhost:8000/tasks/{id}
+### `delete` http://localhost:8000/api/tasks/{id}
 
 Path used to destroy or delete a task from the database by ID
 
