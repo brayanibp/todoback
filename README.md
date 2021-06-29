@@ -89,12 +89,6 @@ php artisan config:cache
 
 ```
 
-### Note:
-
-If you have phpmyadmin you would try to do it from the phpmyadmin panel
-
-![](./doc/phpmyadmin.png)
-
 ```shell
 # If you do not have password for mysql database
 
@@ -109,17 +103,67 @@ mysql -u root -p #You will have to enter your root password
 mysql> CREATE DATABASE db_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 mysql> exit;
+```
+
+### Note:
+
+If you have phpmyadmin you would try to do it from the phpmyadmin panel
+
+![](./doc/phpmyadmin.png)
+
+Now the last steps
+
+```shell
 
 php artisan migrate:fresh --seed #This command will make the tables migration and execute the database tasks seeder
 
 ```
 
-## Learning Laravel
+## How to run
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+After all the install process you will be available to run
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```shell
+
+php artisan serve
+
+```
+
+This command will expose the project on [localhost:8000](http://localhost:8000/) by default.
+
+### Note:
+
+The [http://localhost:8000/](http://localhost:8000/) route is disabled and will send you to a 404 screen
+
+## Available routes
+
+### `get` http://localhost:8000/tasks/single/{id}
+
+### `get` http://localhost:8000/tasks/{filter}
+
+http://localhost:8000/tasks/all
+http://localhost:8000/tasks/completed
+http://localhost:8000/tasks/uncompleted
+
+### `get`http://localhost:8000/tasks/{filter}/{arg}
+
+http://localhost:8000/tasks/name/{arg}
+
+(The "arg" word refers to "argument" and in the case of the path it refers to the name of the task being searched for)
+
+### `post` http://localhost:8000/tasks/
+
+Path used to create a new task into database
+
+### `put` http://localhost:8000/tasks/{id}
+
+Path used to update a task by ID
+
+### `delete` http://localhost:8000/tasks/{id}
+
+Path used to destroy or delete a task from the database by ID
 
 ## License
 
+I have used the default Laravel License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
