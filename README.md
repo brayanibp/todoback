@@ -82,24 +82,24 @@ Depending on your internet connection it would take a while because of that it p
 After install composer dependencies
 
 ```shell
-  # Commands to pre config project
+# Commands to pre config project
 
-  php artisan key:generate
-  php artisan config:cache
+php artisan key:generate
+php artisan config:cache
 
-  # If you do not have password for mysql database
+# If you do not have password for mysql database
 
-  mysql -u root
+mysql -u root
 
-  # If you already have a password then
+# If you already have a password then
 
-  mysql -u root -p #You will have to enter your root password
+mysql -u root -p #You will have to enter your root password
 
-  mysql> CREATE DATABASE todoapp;
+mysql> CREATE DATABASE todoapp;
 
-  mysql> exit;
+mysql> exit;
 
-  php artisan migrate:fresh --seed #This command will make the tables migration and execute the database tasks seeder
+php artisan migrate:fresh --seed #This command will make the tables migration and execute the database tasks seeder
 
 ```
 
