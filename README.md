@@ -168,4 +168,5 @@ Path used to destroy or delete a task from the database by ID
 ## License
 
 I have used the default Laravel License
+
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
